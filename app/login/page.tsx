@@ -97,7 +97,7 @@ export default function LoginPage() {
                   type="text"
                   value={username}
                   onChange={(e) =>
-                    setUsername(e.target.value.toLowerCase().replace(/\s+/g, ""))
+                    setUsername(e.target.value.toLowerCase())
                   }
                   placeholder="e.g. rohit, priya, alex"
                   required

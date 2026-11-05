@@ -96,7 +96,7 @@ export default function AdminDashboardPage() {
 
   async function handleAdminAddMember(e: React.FormEvent) {
     e.preventDefault();
-    const cleanName = addPersonName.toLowerCase().trim().replace(/\s+/g, "");
+    const cleanName = addPersonName.toLowerCase().trim();
     if (!cleanName) return;
 
     setStatusMessage(null);
@@ -121,7 +121,7 @@ export default function AdminDashboardPage() {
 
   async function handleAdminRemoveMember(e: React.FormEvent) {
     e.preventDefault();
-    const cleanName = removePersonName.toLowerCase().trim().replace(/\s+/g, "");
+    const cleanName = removePersonName.toLowerCase().trim();
     if (!cleanName) return;
 
     setStatusMessage(null);
@@ -387,7 +387,7 @@ export default function AdminDashboardPage() {
                 <input
                   type="text"
                   value={addPersonName}
-                  onChange={(e) => setAddPersonName(e.target.value.toLowerCase().replace(/\s+/g, ""))}
+                  onChange={(e) => setAddPersonName(e.target.value.toLowerCase())}
                   placeholder="e.g. rohit"
                   required
                   className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
@@ -437,7 +437,7 @@ export default function AdminDashboardPage() {
                 <input
                   type="text"
                   value={removePersonName}
-                  onChange={(e) => setRemovePersonName(e.target.value.toLowerCase().replace(/\s+/g, ""))}
+                  onChange={(e) => setRemovePersonName(e.target.value.toLowerCase())}
                   placeholder="e.g. rohit"
                   required
                   className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500"

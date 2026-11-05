@@ -104,7 +104,7 @@ export default function TableDetailPage() {
 
   async function handleAddMember(e: React.FormEvent) {
     e.preventDefault();
-    const cleanName = addName.toLowerCase().trim().replace(/\s+/g, "");
+    const cleanName = addName.toLowerCase().trim();
     if (!cleanName) return;
 
     setError("");
@@ -297,7 +297,7 @@ export default function TableDetailPage() {
                 type="text"
                 value={addName}
                 onChange={(e) =>
-                  setAddName(e.target.value.toLowerCase().replace(/\s+/g, ""))
+                  setAddName(e.target.value.toLowerCase())
                 }
                 placeholder="Enter member's name (e.g. rahul, ananya)..."
                 required
