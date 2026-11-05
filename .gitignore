@@ -7,9 +7,6 @@ node_modules/
 .next/
 out/
 
-# Convex generated (will be regenerated on deploy)
-convex/_generated/
-
 # Environment
 .env
 .env.local
